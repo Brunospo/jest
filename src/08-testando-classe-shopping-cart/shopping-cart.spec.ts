@@ -52,4 +52,12 @@ describe("Testing class Shopping Cart", () => {
     sut.clear();
     expect(sut.items.length).toBe(0);
   });
+
+  it("Should remove products", () => {
+    const item1 = createCarItem("Copo", 8);
+    sut.addItem(item1);
+    sut.removeItem(0);
+
+    expect(sut.items.length).toBe(0);
+  });
 });
